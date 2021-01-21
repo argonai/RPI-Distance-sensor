@@ -1,5 +1,5 @@
 # RPI-Distance-sensor
-use [this image]{https://i.stack.imgur.com/gaU6t.png} for the pinout</br>
+use [this image](https://i.stack.imgur.com/gaU6t.png) for the pinout</br>
 acronyms:
 <ul>
   <li>S: Sensor</li>
