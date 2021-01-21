@@ -29,10 +29,10 @@ try:
         distance = (time_amount * 34300) / 2
         #distance = time_amount
 
-        #if(distance < 2 or (round(distance)>300)):
-         #   print("Distance out of range")
-        #else:
-        print(f"Distance is: {distance} cm")
+        if(distance < 2 or (round(distance)>300)):
+            print("Distance out of range")
+        else:
+               print(f"Distance is: {distance} cm")
 
         time.sleep(sleeptime)
 finally:
