@@ -23,7 +23,7 @@ class VLC:
 
     def addPlaylist(self):
         self.mediaList = self.Player.media_list_new()
-        #uncoment de lijn 25 en verander de path naar de folder met de gedichten
+        #uncomment de lijn 25 en verander de path naar de folder met de gedichten
         path = r"/home/pi/RPI-Distance-sensor/vids" 
         songs = os.listdir(path)
         for s in songs:
@@ -40,6 +40,7 @@ class VLC:
         self.listPlayer.previous()
     def stop(self):
         self.listPlayer.stop()
+print("VLC")
 player = VLC()
 player.addPlaylist()
 player.play()
@@ -61,26 +62,17 @@ try:
         distance = (time_amount * 34300) / 2
         #distance = time_amount
 
-        if(distance < 2 or (round(distance)>200)):
-            print(distance)
-            print("Distance out of range")
-        else:
-            print(f"Distance is: {distance} cm")
+        print(round(distance, 2))
         
         
         if(trigger_prevent == 0 and distance < 130):
             trigger_prevent = 1
-            player.next()
+            player.play()
+            print('next')
         elif(trigger_prevent == 1 and distance > 130):
             player.pause()
+            print('pause')
             trigger_prevent = 0
-       
-            
-        
-            
-       
-            
-    
     
         time.sleep(sleeptime)
 finally:
